@@ -7,5 +7,3 @@ Practice DSA
 My latest todo
 My new latest todo
 My new latest tod
-
-new todo
