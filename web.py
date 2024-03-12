@@ -6,8 +6,10 @@ todos = functions.get_todos()
 
 def add_todo():
     todo = st.session_state["new_todo"] + "\n"
-    todos.append(todo)
-    functions.write_todos(todos)
+    if todo.strip():  # Check if todo is not empty
+        todos.append(todo)
+        functions.write_todos(todos)
+        st.session_state["new_todo"] = ""  # Clear the text area
 
 
 st.title("My Todo App")
@@ -22,7 +24,9 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.rerun()
 
-st.text_input(label="", placeholder="Add new todo...",
-              on_change=add_todo, key="new_todo")
-
+new_todo = st.text_input(label="", placeholder="Add new todo...",
+                         on_change=add_todo, key="new_todo")
+st.write("")  # Add a space
+if st.button("Add Todo"):
+    add_todo()
 
