@@ -1,6 +1,6 @@
 # My Todo App
 
-This project is a simple todo list application built using HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks from their todo list.
+This project is a simple todo list application built using Streamlit. It allows users to add, edit, and delete tasks from their todo list.
 
 ## Features
 
@@ -18,13 +18,21 @@ This project is a simple todo list application built using HTML, CSS, and JavaSc
     git clone https://github.com/rky5231/my-todo-app.git
     ```
 
-2. Open the `index.html` file in your web browser.
+2. Install the required dependencies:
 
-3. Start adding, editing, and deleting tasks from your todo list!
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Hosted URL
+3. Run the application:
 
-Access the hosted version of the application at: [https://rky5231-my-todo-app-web-hodof7.streamlit.app/](https://rky5231-my-todo-app-web-hodof7.streamlit.app/)
+    ```bash
+    streamlit run app.py
+    ```
+
+4. Open the provided URL in your web browser.
+
+5. Start adding, editing, and deleting tasks from your todo list!
 
 ## Contributing
 
